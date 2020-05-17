@@ -1,7 +1,8 @@
 <?php
 
 // Define a class
-class User {
+class User
+{
     // Properties (attributes)
     public $name;
 
