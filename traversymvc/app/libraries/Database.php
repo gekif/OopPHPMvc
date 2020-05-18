@@ -39,4 +39,63 @@ class Database
             echo $this->error;
         }
     }
+
+    // Prepare Statemen With Query
+    public function query($sql)
+    {
+        $this->stmt = $this->dbh->prepare($sql);
+    }
+
+    // Bind Values
+    public function bind($param, $value, $type = null)
+    {
+        if (is_null($type)) {
+            switch (true) {
+                case is_int($value):
+                    $type = PDO::PARAM_INT;
+                    break;
+
+                case is_bool($value):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+
+                case is_null($value):
+                    $type = PDO::PARAM_NULL;
+                    break;
+
+                default:
+                    $type = PDO::PARAM_STR;
+            }
+        }
+
+        $this->stmt->bindValue($param, $value, $type);
+    }
+
+    // Execute The Prepared Statement
+    public function execute()
+    {
+        return $this->stmt->execute();
+    }
+
+    // Get Result Set As Array Of Objects
+    public function resultSet()
+    {
+        $this->execute();
+
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // Get Single Record As Object
+    public function single()
+    {
+        $this->execute();
+
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // Get Row Count
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
+    }
 }
