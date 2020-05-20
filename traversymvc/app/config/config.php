@@ -13,4 +13,7 @@ define('APPROOT', dirname(dirname(__FILE__)));
 define('URLROOT', 'http://traversymvc.local');
 
 // Site Name
-define('SITENAME', 'TraversyMVC');
+define('SITENAME', 'SharePosts');
+
+// App Version
+define('APPVERSION', '1.0.0');
