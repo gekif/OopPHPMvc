@@ -45,6 +45,7 @@
     <column id="25" parent="19" name="created_at">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
     <key id="26" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -72,6 +73,7 @@
     <column id="31" parent="20" name="created_at">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
     <key id="32" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

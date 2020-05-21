@@ -1,19 +1,19 @@
 <?php
+  //DB params
+  define('DB_HOST', 'localhost');
+  define('DB_USER', 'root');
+  define('DB_PASS', 'admin');
+  define('DB_NAME', 'tmvc');
 
-// DB Params
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', 'admin');
-define('DB_NAME', 'tmvc');
 
-// App Root
-define('APPROOT', dirname(dirname(__FILE__)));
+  //Define APPROOT
+  define('APPROOT', dirname(dirname(__FILE__)));
+  
+  //Define URLROOT
+  define('URLROOT', 'http://traversymvc.local');
 
-// URL Root
-define('URLROOT', 'http://traversymvc.local');
+  //Define SITENAME
+  define('SITENAME', 'SharePosts');
 
-// Site Name
-define('SITENAME', 'SharePosts');
-
-// App Version
-define('APPVERSION', '1.0.0');
+  //App Version
+  define('APPVERSION', '1.0.0');
